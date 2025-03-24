@@ -1,0 +1,119 @@
+:root {
+    --color-primary: #80b193;
+    --color-secondary: #e8a15b;
+    --color-background: #fafcfa;
+    --color-border: #c0e0cd;
+    --font-decorative: 'Alex Brush', cursive;
+    --font-secondary: 'Ruthligos', cursive;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 390px;
+    margin: 0 auto;
+    font-family: var(--font-decorative);
+    background: #ffffff;
+}
+
+.thank-you-container {
+    width: 390px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-image {
+    width: 390px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover; /* Assure que l'image couvre tout l'espace */
+}
+
+.content-overlay {
+    background: rgba(255, 255, 255, 0.70);
+    width: 390px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.thank-you-card {
+    width: 352px;
+    position: absolute;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-background);
+    border-radius: 50px;
+    border: 2px solid var(--color-border);
+    padding: 40px 20px;
+    text-align: center;
+    z-index: 1; /* Assure que la carte est au-dessus du fond */
+    border-radius: 300px 300px 0 0;
+}
+
+.logo-container {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Garde les proportions du logo */
+}
+
+.thank-you-title {
+    color: var(--color-secondary);
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.couple-names {
+    color: var(--color-border);
+    font-family: var(--font-secondary);
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.thank-you-message {
+    color: var(--color-primary);
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.return-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.return-btn:hover {
+    background: #6d9780;
+}
+
+@font-face {
+    font-family: 'Ruthligos';
+    src: url(./fonts/Ruthligos.ttf);
+}

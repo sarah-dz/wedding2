@@ -1,0 +1,456 @@
+:root {
+  --color-primary: #6aac83;
+  --color-secondary: #e8a15b;
+  --color-background: #fafcfa;
+  --color-border: #c0e0cd;
+  --font-decorative: 'Alex Brush', cursive;
+  --font-secondary: 'Ruthligos', cursive;
+}
+
+/* #80b193 */
+
+@font-face {
+  font-family: 'Ruthligos';
+  src: url(/fonts/Ruthligos.ttf);
+}
+
+/* Configuration pour mobile uniquement */
+body {
+  width: 390px;
+  margin: 0 auto;
+  font-family: var(--font-decorative);
+  background: #ffffff;
+}
+
+.wedding-container {
+    width: 390px;
+    min-height: 100vh; /* Change height fixe en min-height */
+    position: relative;
+    overflow-x: hidden; /* Permet le scroll vertical mais empêche le scroll horizontal */
+}
+/* Background */
+.background-image {
+  height: 2700px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.content-overlay {
+  background: rgba(255, 255, 255, 0.70);
+  width: 390px;
+  height: 2700px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hebrew-sentence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.hebrew-sentence img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Logo et bouton d'invitation */
+.logo {
+  width: 259px;
+  height: 358px;
+  position: absolute;
+  left: 65px;
+  top: 130px;
+  border-radius: 5px;
+}
+
+.view-invitation-btn {
+  position: absolute;
+  left: 123px;
+  top: 570px;
+  width: 160px;
+  height: 53px;
+  background: #fcfffd;
+  border: 2px solid #c0e0cd;
+  border-radius: 15px;
+  color: #e8a15b;
+  font-family: var(--font-decorative);
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Carte d'invitation */
+.invitation-card {
+  width: 352px;
+  height: 723px;
+  position: absolute;
+  left: 19px;
+  top: 856px;
+  background: #fafcfa;
+  border-radius: 500px 500px 0 0;
+  border: 2px solid #c0dfcc;
+}
+
+/* Textes des familles */
+.families {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.family-zaoui {
+  text-align: left;
+  flex: 1;
+}
+
+.family-journo-group {
+  text-align: right;
+  flex: 1;
+}
+
+
+.family-zaoui p, 
+.family-journo-group p {
+  color: var(--color-primary);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.hebrew-text {
+  color: var(--color-primary);
+  font-size: 14px;
+  position: absolute;
+  left: 160px;
+  top: -10px;
+}
+
+
+/* Annonce principale */
+.main-announcement {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.announcement-text {
+  margin-top: 10px;
+  font-size: 23px;
+}
+
+/* Noms des mariés */
+.couple-names {
+  color: #c0e0cd;
+  font-family: var(--font-secondary);
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  
+}
+
+/* Détails du mariage */
+.wedding-details {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.date {
+  color: #e8a15b;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.hebrew-date {
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.ceremony-time {
+  color: #e8a15b;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.venue {
+  color: var(--color-primary);
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+
+.reception {
+  color: #e8a15b;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+/* Message mémorial */
+.memorial-message {
+  color: var(--color-primary);
+  font-size: 17px;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1.4;
+}
+
+/* Formulaire RSVP */
+.rsvp-form {
+  width: 352px;
+  min-height: 590px;
+  position: absolute;
+  left: 19px;
+  top: 1988px;
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: 0 0 0 50px;
+  padding: 30px 20px;
+  overflow: visible;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-logo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -40px;
+  position: relative;
+}
+
+.form-logo img {
+  width: 60px;
+  height: 100px;
+  padding-top: 30px;
+}
+
+.rsvp-form h2 {
+  color: var(--color-secondary);
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 10px;
+  font-family: var(--font-decorative);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.form-group label {
+  color: var(--color-primary);
+  font-size: 22px;
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-decorative);
+}
+
+
+.form-group input:not([type="radio"]),
+.form-group textarea {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px dashed var(--color-secondary);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(128, 177, 147, 0.5);
+}
+
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+
+.radio-text {
+  font-size: 20px;
+  font-weight: bold; 
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+  max-height: 120px;
+}
+
+.submit-btn {
+  width: auto;
+  min-width: 120px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  font-family: var(--font-decorative);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  padding: 0 25px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+  background: #6d9780;
+}
+
+/* Styles pour les états focus et hover */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+/* Styles pour la validation */
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+/* Placeholder font */
+input::placeholder,
+textarea::placeholder {
+  font-family: var(--font-decorative);
+  font-size: 20px;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border-bottom-color: var(--color-primary);
+}
+
+.radio-group {
+  display: flex;
+  gap: 38px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  color: #9db7a8;
+}
+
+.submit-btn {
+  width: 99px;
+  height: 27px;
+  background: #bddcc9;
+  border-radius: 7px;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+}
+
+/* Section localisation */
+.location {
+  width: 352px;
+  height: 350px;
+  position: absolute;
+  left: 19px;
+  top: 1610px;
+  background: #fafcfa;
+  border: 2px solid #b3ddca;
+  border-radius: 0 0 50px 0;
+  text-align: center;
+}
+
+.location h2 {
+  color: var(--color-secondary);
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.address {
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+.address-hebrew {
+  color: var(--color-primary);
+  font-family: "LtPerfume-Regular", var(--font-decorative);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.map {
+  margin-top: 20px;
+}
+
+.map img {
+  width: 216px;
+  height: 131px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.map-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.waze-btn {
+  width: 100px;
+  height: 27px;
+  background: #bddcc9;
+  border-radius: 7px;
+  color: white;
+  font-size: 24px;
+  display: block;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  width: 390px;
+  height: 36px;
+  background: rgba(189, 220, 201, 0.32);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  font-size: 14px;
+}

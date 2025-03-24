@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitation au mariage de Sarah et Gabriel">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ruthligos&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./Favicon Generator/android-chrome-512x512.png">
+    <link rel ="shortcut icon" href="./Favicon Generator/android-chrome-512x512.png">
+    <style>
+        /* Reset CSS */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        menu, ol, ul {
+            list-style-type: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+    <title>Invitation au mariage de Sarah et Gabriel</title>
+</head>
+<body>
+    <div class="wedding-container">
+        <img class="background-image" src="group-460.svg" alt="Décoration de fond" />
+        <div class="content-overlay"></div>
+        
+        <header class="invitation-header">
+            <img class="logo" src="logo0.png" alt="Logo du mariage" />
+            <button id="view-invitation-btn" class="view-invitation-btn" aria-label="Voir l'invitation">
+              Voir l'invitation
+          </button>
+        </header>
+
+        <main class="invitation-content">
+            <div class="invitation-card" id="invitation-content">
+              <div class="hebrew-sentence" >
+                  <img src="freepik_br_f0e38ab2-88df-415a-8f41-01e2ccc1e7a5.png" alt="Logo du mariage" />
+              </div>
+                <!-- Familles -->
+                <section class="families">
+                    <div class="family-zaoui">
+                        <p>Mr & Mme André Lozner</p>
+                        <p>Mr Guy Zaoui</p>
+                    </div>
+                    <div class="hebrew-text">בס " ד</div>
+                    <div class="family-journo-group">
+                        <p>Mr & Mme Aaron Journo</p>
+                        <p>Mme Josiane Journo</p>
+                        <p>Mr Didier Journo</p>
+                        <p>Mme Isabelle Journo</p>
+                    </div>
+                </section>
+
+                <!-- Annonce principale -->
+                <section class="main-announcement">
+                    <p class="announcement-text">
+                        Ont la joie de vous faire part du mariage <br>
+                        de leurs petits-enfants et enfants
+                    </p>
+                    <h1 class="couple-names">Sarah et Gabriel</h1>
+                </section>
+
+                <!-- Détails -->
+                <section class="wedding-details">
+                    <p class="date">Le Jeudi 05 Juin 2025</p>
+                    <p class="hebrew-date">09 Sivan 5785</p>
+                    <p class="ceremony-time">Pour la Houpa qui aura lieu à 18:00</p>
+                    <p class="venue">Dans les jardins de la salle <br> Via Caselio, Hadera</p>
+                    <p class="reception">La cérémonie sera suivie d'un cocktail</p>
+                </section>
+
+                <!-- Message spécial -->
+                <p class="memorial-message">
+                    En ce jour de simha nous aurons une tendre pensée
+                    pour ma mère ainsi que nos grand-parents disparus.
+                </p>
+            </div>
+
+            <!-- Formulaire RSVP -->
+            <form 
+                class="rsvp-form" 
+                name="rsvp"
+                method="POST" 
+                data-netlify="true"
+                action="thanks.html">
+                <input type="hidden" name="form-name" value="rsvp"
+            >
+
+            <input type="hidden" name="form-name" value="rsvp">
+              <div class="form-logo">
+                  <img src="logo0.png" alt="Logo du mariage" />
+              </div>
+              <h2>Merci de confirmer votre présence</h2>
+              
+              <div class="form-content">
+                  <div class="form-group">
+                      <label for="nom">Nom : </label>
+                      <input 
+                          type="text" 
+                          id="nom" 
+                          name="nom" 
+                          required 
+                          placeholder="Votre nom"
+                      >
+                  </div>
+          
+                  <div class="form-group">
+                      <label for="prenom">Prénom : </label>
+                      <input 
+                          type="text" 
+                          id="prenom" 
+                          name="prenom" 
+                          required 
+                          placeholder="Votre prénom"
+                      >
+                  </div>
+          
+                  <div class="form-group">
+                      <label>Serez-vous présent à la cérémonie ?</label>
+                      <div class="radio-group">
+                          <label class="radio-label">
+                              <input type="radio" name="presence" value="oui" required>
+                              <span class="radio-text">Oui</span>
+                          </label>
+                          <label class="radio-label">
+                              <input type="radio" name="presence" value="non" required>
+                              <span class="radio-text">Non</span>
+                          </label>
+                      </div>
+                  </div>
+          
+                  <div class="form-group">
+                      <label for="nombre">Nombre de personnes : </label>
+                      <input 
+                          type="number" 
+                          id="nombre" 
+                          name="nombre" 
+                          min="0" 
+                          max="10"
+                          required 
+                          placeholder="Nombre d'invités"
+                      >
+                  </div>
+          
+                  <div class="form-group message-group">
+                      <label for="message">Un petit mot pour les mariés :</label>
+                      <textarea 
+                          id="message" 
+                          name="message" 
+                          rows="1"
+                          placeholder="Écrivez votre message ici..."
+                      ></textarea>
+                  </div>
+              </div>
+
+              <br><br>
+          
+              <button type="submit" class="submit-btn">
+                  Envoyer
+              </button>
+          </form>
+
+            <!-- Localisation -->
+            <section class="location">
+                <h2>Adresse</h2>
+                <p class="address">Ha-Zagag St 19, Hadera</p>
+                <p class="address-hebrew">רחוב הזגג    19 ,חדרה</p>
+                <div class="map">
+                    <img src="./assets/Access_Plan.png" alt="Plan d'accès">
+                    <div class="map-buttons">
+                        <a href="https://waze.com/ul/hsvbbddcdx" class="waze-btn">Waze</a>
+                        <a href="https://maps.app.goo.gl/3XR5Uau3bSVQyiY18?g_st=com.google.maps.preview.copy" class="waze-btn">Maps</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
